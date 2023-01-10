@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --top-height: 15vh;
+}
+
+.top {
+    height: var(--top-height);
+    background-color: white;
+
+}
+
+.bottom {
+    height: calc(100vh - var(--top-height));
+    background-color: #f3f4f6;
+    
+    
+}
+
+.books {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    justify-content: center;
+    align-content: space-evenly;
+    margin: 10px 150px;
+    
+}
+
+.book {
+    border: 1px solid black;
+    height: 200px;
+    
+    
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.btn button {
+    width: 200px;
+    height: 40px
+}
