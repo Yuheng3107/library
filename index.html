@@ -6,24 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="top">
-        <h1>Library</h1>
-    </div>
-    <div class="bottom">
-        <div class="btn">
-            <button>Add Book +</button>
+    <div class="container">
+        <div id="overlay"></div>
+        <div class="top">
+            <h1>Library</h1>
         </div>
-        
-        <div class="books">
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
+        <div class="spacer"></div>
+        <div class="bottom">
+            <div class="btn-area">
+                <button class="btn">New Book</button>
+            </div>
+            <form id="addBook" action="">
+                <h2>Add A New Book</h2>
+                <input type="text" name="title" id="title" placeholder="Title" required>
+                <input type="text" id="author" name="author" placeholder="Author" required>
+                <input type="number" name="pages" id="pages" placeholder="Pages" required>
+                <label for="readBook">Have you read it? <input type="checkbox" id="readBook" name="read" value="true"></label>
+                <div>
+                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="cancel" id="cancel" value="Cancel">
+                </div>
+                
+            </form>
+            
+            <div class="books">
+                <div class="book">
+                    <div class="title">Title: </div>
+                </div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+            </div>
+            
         </div>
-        
     </div>
+    
 </body>
 </html>
