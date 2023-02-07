@@ -35,7 +35,6 @@ function displayBooks(library) {
         readButton.style.backgroundColor = (book.read) ? "#5cb85c": "#d9534f";
         readButton.type = "button";
         readButton.innerText = (book.read) ? "Read": "Unread";
-        bookChild.appendChild(readButton);
         readButton.addEventListener('click', (e) => {
             book.read = !book.read;
             displayBooks(library);
@@ -46,8 +45,15 @@ function displayBooks(library) {
         removeBookButton.innerText = "Remove Book";
         removeBookButton.addEventListener('click', (e) => {
             // remove book from library
-        })
-        bookChild.appendChild(removeBookButton);
+            library.splice(library.indexOf(book), 1);
+            displayBooks(library);
+        });
+        let buttonGroup = document.createElement('div');
+        buttonGroup.style.display = "flex";
+        buttonGroup.appendChild(readButton);
+        buttonGroup.appendChild(removeBookButton);
+        buttonGroup.style.gap = "20px";
+        bookChild.appendChild(buttonGroup);
         books.appendChild(bookChild);
     }
 }
