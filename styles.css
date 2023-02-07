@@ -37,15 +37,27 @@
 }
 
 .book {
-
     height: 300px;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow:  2px 2px 2px #e5e7eb;
     margin-bottom: 40px;
-    
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: larger;
 }
 
+.book button {
+    border-radius: 4px;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    font-size: large;
+    align-self: center;
+    color: white;
+}
 .btn-area {
     display: flex;
     justify-content: center;
@@ -65,6 +77,10 @@
     font-weight: bolder;
     border-radius: 5px;
     border: 1px solid black;
+}
+
+.btn:hover {
+    background-color: #d1d5db;
 }
 
 #addBook {
