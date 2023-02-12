@@ -5,16 +5,19 @@ const cancelBtn = document.querySelector('#cancel');
 const overlay = document.querySelector('#overlay');
 const books = document.querySelector('.books');
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+    
 
-Book.prototype.info = function () {
-   return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
-} 
+    info() {
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
+    } 
+}
 
 let library = [];
 
